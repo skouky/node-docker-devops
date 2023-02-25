@@ -26,6 +26,7 @@ const userRouter = require("./routes/userRoutes");
 const app = express();
 
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
+console.log(mongoURL);
 mongoose.set("strictQuery", false);
 mongoose
   .connect(mongoURL)
