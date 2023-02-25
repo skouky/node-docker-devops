@@ -8,6 +8,7 @@ services:
       - dockernode
   dockernode:
     build: .
+    image: skouky/dockernode
     environment:
       - PORT=2999
     depends_on:

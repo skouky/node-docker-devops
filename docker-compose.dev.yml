@@ -15,9 +15,11 @@ services:
       - NODE_ENV=development
       - MONGO_USER=admin
       - MONGO_PASSWORD=cisco4u
+      - MONGO_DATABASE=dockernode
       - SESSION_SECRET=secret
     command: npm run dev
   mongo:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=cisco4u
+      - MONGO_INITDB_DATABASE=dockernode

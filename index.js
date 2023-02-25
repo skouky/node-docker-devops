@@ -8,6 +8,7 @@ const {
   MONGO_PASSWORD,
   MONGO_PORT,
   MONGO_IP,
+  MONGO_DATABASE,
   REDIS_URL,
   REDIS_PORT,
   SESSION_SECRET,
@@ -25,7 +26,7 @@ const userRouter = require("./routes/userRoutes");
 
 const app = express();
 
-const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
+const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/${MONGO_DATABASE}?authSource=admin`;
 console.log(mongoURL);
 mongoose.set("strictQuery", false);
 mongoose
