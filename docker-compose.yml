@@ -14,8 +14,7 @@ services:
   mongo:
     image: mongo
     volumes:
-      - data/mongodb:/data/db
-      - data/mongodbbackups:/data/db/backups
-
+      - ./data/mongodb:/data/db
+      - ./data/mongodbbackups:/data/db/backups
   redis:
     image: redis
