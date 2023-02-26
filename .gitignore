@@ -1,1 +1,3 @@
 node_modules/
+certbotdir/*
+!certbotdir/var/www/certbot/.well-known/acme-challenge/index.html
