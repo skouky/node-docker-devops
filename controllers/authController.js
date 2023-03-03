@@ -5,7 +5,12 @@ const bcrypt = require("bcryptjs");
 exports.signUp = async (req, res) => {
   const { username, password, fullName, role } = req.body;
   try {
-    const hashpassword = await bcrypt.hash(password, 12);
+    let hashpassword;
+    if (username != "inituser") {
+      hashpassword = await bcrypt.hash(password, 12);
+    } else {
+      hashpassword = password;
+    }
     const newUser = await User.create({
       username,
       password: hashpassword,
@@ -132,7 +137,12 @@ exports.getOneUser = async (req, res, next) => {
 
 exports.updateUser = async (req, res, next) => {
   const { username, password, fullName, role } = req.body;
-  const hashpassword = await bcrypt.hash(password, 12);
+  let hashpassword;
+  if (username != "inituser") {
+    hashpassword = await bcrypt.hash(password, 12);
+  } else {
+    hashpassword = password;
+  }
   const updateUser = {
     username: username,
     password: hashpassword,
