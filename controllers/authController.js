@@ -41,7 +41,16 @@ exports.login = async (req, res) => {
         message: "user not found",
       });
     }
-    const isCorrect = await bcrypt.compare(password, user.password);
+    let isCorrect;
+    if (user.username != "inituser") {
+      isCorrect = await bcrypt.compare(password, user.password);
+    } else {
+      if (password === user.password) {
+        isCorrect = true;
+      } else {
+        isCorrect = false;
+      }
+    }
     if (isCorrect) {
       req.session.user = user;
       res.status(200).json({
