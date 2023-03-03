@@ -5,11 +5,11 @@ const protect = require("../middleware/authMiddleware");
 const protectAdmin = require("../middleware/authMiddleware");
 const router = express.Router();
 
+router.route("/").get(protectAdmin, authController.getAllUsers);
 router.post("/login", authController.login); // OPEN
 router.delete("/logout", authController.logout); // OPEN
 router.get("/state", authController.state); // OPEN
 router.post("/signup", protectAdmin, authController.signUp);
-router.route("/").get(protectAdmin, authController.getAllUsers);
 
 router
   .route("/signup/:id")
