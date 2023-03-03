@@ -1,6 +1,5 @@
 const protect = (req, res, next) => {
   const { user } = req.session;
-
   if (!user) {
     return res.status(401).json({ status: "fail", message: "unauthorized" });
   }
@@ -8,4 +7,19 @@ const protect = (req, res, next) => {
   next();
 };
 
+const protectAdmin = (req, res, next) => {
+  const { user } = req.session;
+  if (!user) {
+    return res.status(401).json({ status: "fail", message: "unauthorized" });
+  }
+  if (user.role != "admin") {
+    return res
+      .status(401)
+      .json({ status: "fail", message: "unauthorized admin" });
+  }
+  req.user = user;
+  next();
+};
+
 module.exports = protect;
+module.exports = protectAdmin;

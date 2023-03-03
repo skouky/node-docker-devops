@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>dockernode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/fe/v1/main.css"
+    />
+  </head>
+  <body>
+    <a href="/fe/v1">Home</a>
+    <form>
+      <div class="container1">
+        <table>
+          <tr>
+            <td>
+              <label for="uname"><b>Username</b></label>
+            </td>
+            <td>
+              <input
+                id="loginUsername"
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="psw"><b>Password</b></label>
+            </td>
+            <td>
+              <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="alnright">
+              <button id="loginButton" type="submit">Login</button>
+            </td>
+            <!--<label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>-->
+          </tr>
+        </table>
+      </div>
+
+      <!--<div class="container" style="background-color: #f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>-->
+    </form>
+    <p id="loginMessage"></p>
+    <script src="/fe/v1/login/loginmain.js"></script>
+  </body>
+</html>

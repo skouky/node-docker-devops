@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>dockernode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/fe/v1/main.css"
+    />
+  </head>
+  <body>
+    <a href="/fe/v1">Home</a><br />
+    <a href="/fe/v1/trade">Trades</a>
+    <form>
+      <div class="container1">
+        <table>
+          <tr>
+            <td>
+              <label for="brokerage"><b>Brokerage</b></label>
+            </td>
+            <td>
+              <input
+                id="brokerage"
+                type="text"
+                value="optionsXpress"
+                name="brokerage"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="date"><b>Date</b></label>
+            </td>
+            <td>
+              <input id="date" type="text" value="" name="date" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="orderId"><b>Order ID</b></label>
+            </td>
+            <td>
+              <input
+                id="orderId"
+                type="text"
+                placeholder=""
+                name="orderId"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="sellOrderId"><b>Sell Order IDs</b></label>
+            </td>
+            <td>
+              <input
+                id="sellOrderId"
+                type="text"
+                placeholder=""
+                name="sellOrderId"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="linkOrderId"><b>Link Order ID</b></label>
+            </td>
+            <td>
+              <input
+                id="linkOrderId"
+                type="text"
+                placeholder=""
+                name="linkOrderId"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="assetType"><b>Asset Type</b></label>
+            </td>
+            <td>
+              <input
+                id="assetType"
+                type="text"
+                value="Common Stock"
+                name="assetType"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="assetSymbol"><b>Asset Symbol</b></label>
+            </td>
+            <td>
+              <input
+                id="assetSymbol"
+                type="text"
+                placeholder=""
+                name="assetSymbol"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="actionType"><b>Action Type</b></label>
+            </td>
+            <td>
+              <input
+                id="actionType"
+                type="text"
+                value="Buy"
+                name="actionType"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="units"><b>Units</b></label>
+            </td>
+            <td>
+              <input id="units" type="text" value="0" name="units" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="price"><b>Price Per Unit</b></label>
+            </td>
+            <td>
+              <input id="price" type="text" value="0" name="price" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="currency"><b>Currency</b></label>
+            </td>
+            <td>
+              <input
+                id="currency"
+                type="text"
+                value="USD"
+                name="currency"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="forExRate"><b>FOREX Rate</b></label>
+            </td>
+            <td>
+              <input
+                id="forExRate"
+                type="text"
+                value="1"
+                name="forExRate"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="commission"><b>Commission</b></label>
+            </td>
+            <td>
+              <input id="commission" type="text" value="0" name="commission" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="fees"><b>Fees</b></label>
+            </td>
+            <td>
+              <input id="fees" type="text" value="0" name="fees" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="labels"><b>Labels</b></label>
+            </td>
+            <td>
+              <input id="labels" type="text" placeholder="" name="labels" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="notes"><b>Notes</b></label>
+            </td>
+            <td>
+              <input id="notes" type="text" placeholder="" name="notes" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="tradeDeleteDiv">
+                <button
+                  id="tradeDeleteButton"
+                  type="submit"
+                  style="background-color: red"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+            <td class="alnright">
+              <button id="tradeAddButton" type="submit">Add</button>
+            </td>
+            <!--<label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>-->
+          </tr>
+        </table>
+      </div>
+
+      <!--<div class="container" style="background-color: #f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>-->
+      <input id="id" type="hidden" value="" name="id" />
+    </form>
+    <script src="/fe/v1/trade/tradeaddedit.js"></script>
+  </body>
+</html>

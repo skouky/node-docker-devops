@@ -10,6 +10,16 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: [true, "User must have a password"],
   },
+  fullName: {
+    type: String,
+    require: [true, "User must have a fullName"],
+    unique: false,
+  },
+  role: {
+    type: String,
+    require: [true, "User must have a role"],
+    unique: false,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

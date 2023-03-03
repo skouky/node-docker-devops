@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>dockernode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/fe/v1/main.css"
+    />
+  </head>
+  <body>
+    <a href="/fe/v1">Home</a><br />
+    <a href="/fe/v1/admin">Admin</a>
+    <form>
+      <div class="container1">
+        <table>
+          <tr>
+            <td>
+              <label for="uname"><b>Email Address</b></label>
+            </td>
+            <td>
+              <input
+                id="loginUsername"
+                type="text"
+                placeholder="Enter Username"
+                name="uname"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="psw"><b>Password</b></label>
+            </td>
+            <td>
+              <input
+                id="loginPassword"
+                type="password"
+                placeholder="Enter Password"
+                name="psw"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="fullName"><b>Full Name</b></label>
+            </td>
+            <td>
+              <input id="fullName" type="text" name="fullName" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="role"><b>Role</b></label>
+            </td>
+            <td>
+              <select name="role" id="role">
+                <option value="admin">admin</option>
+                <option value="client">client</option>
+                <option value="guest">guest</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="userDeleteDiv">
+                <button
+                  id="userDeleteButton"
+                  type="submit"
+                  style="background-color: red"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+            <td class="alnright">
+              <button id="signupButton" type="submit">Signup</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <input id="id" type="hidden" value="" name="id" />
+    </form>
+    <p id="loginMessage"></p>
+    <script src="/fe/v1/login/loginsignup.js"></script>
+  </body>
+</html>

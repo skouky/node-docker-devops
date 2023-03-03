@@ -1,0 +1,11 @@
+.container1 {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+.alnright {
+  text-align: right;
+}
+.alnleft {
+  text-align: left;
+}
